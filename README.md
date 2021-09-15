@@ -14,11 +14,13 @@
 
 [labuladong / fucking-algorithm](https://github.com/labuladong/fucking-algorithm.git) 《labuladong 的算法小抄》
 
+<br>
+
 
 
 ### Metis 项目列表
 
-本工程是一系列**算法、代码、工具、功能、框架**的用法与使用心得，**Metis** 这个名字取自希腊神话中的智慧女神**墨提斯**。
+Metis 工程是一系列**算法、代码、工具、功能、框架**的用法与使用心得，**Metis** 这个名字取自希腊神话中的智慧女神**墨提斯**。
 
 [Metis](https://github.com/Ariescat/Metis)：功能测试，用例
 
