@@ -5,29 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <name>metis</name>
     <groupId>com.ariescat</groupId>
-    <artifactId>metis</artifactId>
+    <artifactId>metis-leetcode</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>metis-java</module>
-        <module>metis-groovy</module>
         <module>metis-algorithm</module>
         <module>metis-algorithm-leetcode</module>
-        <module>metis-functions</module>
-        <module>metis-hotswap</module>
-        <!--<module>metis-spring</module>-->
     </modules>
 
     <properties>
         <project.encoding>UTF-8</project.encoding>
-        <project.version>1.0-SNAPSHOT</project.version>
         <java.version>1.8</java.version>
-        <spring.version>3.2.4.RELEASE</spring.version>
-        <slf4j.version>1.7.5</slf4j.version>
-        <log4j.version>2.13.3</log4j.version>
     </properties>
+
     <repositories>
         <repository>
             <id>central</id>
@@ -55,6 +46,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -79,73 +71,6 @@
                 <scope>test</scope>
             </dependency>
 
-            <!--sun.tools-->
-            <dependency>
-                <groupId>com.sun</groupId>
-                <artifactId>tools</artifactId>
-                <version>1.8</version>
-                <scope>system</scope>
-                <systemPath>${java.home}/../lib/tools.jar</systemPath>
-            </dependency>
-
-            <!--spring-->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aspects</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-orm</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-tx</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
-            <!--cglib-->
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>3.2.10</version>
-            </dependency>
-
-            <!--javassist-->
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.20.0-GA</version>
-            </dependency>
-
-            <!--quartz-->
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>2.3.2</version>
-            </dependency>
-
             <!--json-->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -158,101 +83,6 @@
                 <version>2.8.5</version>
             </dependency>
 
-            <!--slf4j-->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>jcl-over-slf4j</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>jul-to-slf4j</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-
-            <!--log4j2-->
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j-impl</artifactId>
-                <version>${log4j.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.lmax</groupId>
-                <artifactId>disruptor</artifactId>
-                <version>3.4.2</version>
-            </dependency>
-
-            <!--netty-->
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.44.Final</version>
-            </dependency>
-
-            <!--http-->
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpcore</artifactId>
-                <version>4.4.4</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpasyncclient</artifactId>
-                <version>4.1.1</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.httpcomponents</groupId>
-                        <artifactId>httpcore</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!--原始类型库koloboke-->
-            <dependency>
-                <groupId>com.koloboke</groupId>
-                <artifactId>koloboke-api-jdk6-7</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.koloboke</groupId>
-                <artifactId>koloboke-impl-jdk6-7</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-
-            <!--redis-->
-            <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-                <version>3.1.0</version>
-            </dependency>
-
-            <!--dubbo-->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>2.7.0</version>
-            </dependency>
-
             <!--others-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -261,16 +91,9 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.codehaus.groovy</groupId>
-                <artifactId>groovy</artifactId>
-                <version>2.5.6</version>
-            </dependency>
-            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>24.1.1-jre</version>
-                <!--<version>20.0</version>-->
-                <!--<version>28.2-jre</version>-->
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
@@ -292,11 +115,6 @@
                 <artifactId>jcip-annotations</artifactId>
                 <version>1.0</version>
                 <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>1.6.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
