@@ -1,7 +1,7 @@
 # LeetCode 日常
 
 
-### 其他子项目
+### 其他Metis项目
 
 [Metis-Mall](https://github.com/Ariescat/Metis-Mall.git) ：分布式电商商城
 
