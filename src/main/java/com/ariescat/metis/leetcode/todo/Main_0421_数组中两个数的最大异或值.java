@@ -1,4 +1,4 @@
-package com.ariescat.metis.leetcode.不太懂;
+package com.ariescat.metis.leetcode.todo;
 
 /**
  * 421. 数组中两个数的最大异或值

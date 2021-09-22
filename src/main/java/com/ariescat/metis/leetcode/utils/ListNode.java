@@ -28,6 +28,10 @@ public class ListNode {
         return head;
     }
 
+    public static ListNode build2(Integer... arr) {
+        return build(arr);
+    }
+
     @Override
     public String toString() {
         StringBuilder ret = new StringBuilder();
