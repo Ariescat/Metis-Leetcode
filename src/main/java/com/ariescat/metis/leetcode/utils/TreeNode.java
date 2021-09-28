@@ -41,4 +41,13 @@ public class TreeNode {
         }
         return nodes[0];
     }
+
+    public static TreeNode build2(Integer... arr) {
+        return build(arr);
+    }
+
+    @Override
+    public String toString() {
+        return val + "";
+    }
 }
