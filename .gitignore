@@ -4,7 +4,9 @@ _site
 
 # Compiled class file
 target/
+leetcode_c++/out/*
 
 # idea Files
 .idea/
 *.iml
+*.DS_Store
